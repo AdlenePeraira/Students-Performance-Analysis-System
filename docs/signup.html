@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Kerala Tourism</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<style>
+    *{margin:0;padding:0}body{width:100%;height:90vh;background-repeat:no-repeat;background-position:center center;background-size:cover;background-attachment:fixed}.signin{margin:15%;float:center;border:2px solid #000;background:#2e3740;color:grey;box-shadow:0 30px 60px 0 rgba(90,116,148,.4)}h2{color:grey;font-family:'Times New Roman',serif;font-size:15px;font-weight:700;font-size:4em;text-align:center;margin-top:50px;margin-bottom:30px}.inputs{text-align:center;color:grey;font-family:'Times New Roman',serif;font-size:30px;font-size:1.5em;line-height:30px}label{margin-bottom:30px}#mainfooter{background:#333;color:#fff;padding:30px;margin-bottom:0}.containerf{text-align:center;margin-bottom:0}
+
+
+.password-meter {
+  margin-top: 5px;
+  padding: 10px;
+  color: #ddd;
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 500px;
+  }
+}
+</style>
+</head>
+<body background="https://drive.google.com/uc?export=view&id=1POEXxMxxET0Dg9V6fONXOmc4_h5o_FhX">
+<!--Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://drive.google.com/uc?export=view&id=1c_wWuWxL6bONU5R3nfdeNmXIevmuSAVL" alt="logo" width="75" height="60" class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/login">Signup/Login</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Training and Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+        </li>
+       <!--
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="help.html">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Packages <span class="badge bg-secondary">Coming Soon</span></a>
+        </li>
+          -->
+      </ul>
+      <form class="d-flex" >
+        <input  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--signin-->
+<div class="signin" >
+<form action="/action_page.php" id="form" onsubmit = "return validate()">
+      <center><br><h2>Sign Up</h2><br>
+           <div class="inputs">
+      <label for="username">Username : </label>
+      <input id="usrname" name ="username" type="text" placeholder="Enter your name" required><br>
+       <label for="email">Email Address : </label>
+      <input id="email" name ="email" type="email" placeholder="Enter e-mail address" required><br>
+        <label for="phone">Phone Number : </label>
+      <input id="phone" name ="phone" type="text"  placeholder="Enter phone number" required><br>
+
+       <label for="password">Password : </label>
+        <input name="password" id="password" type="password" size="15" maxlength="100" onkeyup="return passwordChanged()" >
+        <span id="strength">Type Password</span>     <br>
+
+
+       <label for="repeat">Confirm Password : </label>
+      <input id="rpsw" type="password" name ="repeat" placeholder="Retype Password" onkeyup="return passwordMatch()" required>
+             <span id="match">Repeat Password</span>     <br>
+             <br>
+        <input type="checkbox" name="check" required>
+        <label for="check">Accept rules and conditions</label>  <br>
+        <input type="submit" value="Sign Up">
+        <br><br>
+          <a href="/login" style="text-decoration:none; color:white;">Already have an account? Log In</a>
+          <a href="#" style="text-decoration:none; color:white;"> <h6>Terms and Conditions</h6></a></center> <br>
+            </div>
+   </form>
+  </div>
+ <!--footer-->
+<footer id="mainfooter">
+  <div class="containerf">
+    <h4>Signup for our news letter</h4>
+    <input type="email"placeholder="enter email address" required>
+    <button>Send</button>
+       <p>copyright &copy; 2022 SPAS</p>
+  </div>
+   </footer>
+    <script>
+        function validate()
+{
+  var inputphn = document.getElementById("phone");
+var inputemail= document.getElementById("email");
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(inputphn.value.match(phoneno))
+     {
+	   return true;
+	 }
+   else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     }
+
+  var email= /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+  if (email.test(inputemail.value))
+   {
+    return true;
+   }
+  else
+    {
+    alert("You have entered an invalid email address!");
+    return false;
+    }
+
+}
+
+
+
+function passwordChanged() {
+         var pwd = document.getElementById("password");
+  var strength = document.getElementById('strength');
+        var strongRegex = new RegExp("^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        var mediumRegex = new RegExp("^(?=.{10,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+        var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+
+        if (pwd.value.length == 0) {
+            strength.innerHTML = 'Type Password';
+        } else if (false == enoughRegex.test(pwd.value)) {
+            strength.innerHTML = '<span style="color:red">Weak!</span>';
+        } else if (strongRegex.test(pwd.value)) {
+            strength.innerHTML = '<span style="color:green">Strong!</span>';
+        } else if (mediumRegex.test(pwd)) {
+            strength.innerHTML = '<span style="color:orange">Medium!</span>';
+        } else {
+            strength.innerHTML = '<span style="color:red">Weak!</span>';
+        }
+    }
+
+
+function passwordMatch(){
+      var pwd = document.getElementById("password");
+      var rpwd =document.getElementById("rpsw");
+    var match = document.getElementById('match');
+
+      if (pwd.value == rpwd.value){
+            match.innerHTML = '<span style="color:green">Password matches!</span>';
+      }
+      else{
+            match.innerHTML = '<span style="color:red">Password does not match!</span>';
+      }
+
+}
+    </script>
+  </body>
+</html>
